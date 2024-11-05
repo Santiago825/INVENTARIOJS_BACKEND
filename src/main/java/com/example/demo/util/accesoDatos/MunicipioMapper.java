@@ -10,7 +10,7 @@ import com.example.demo.util.modelos.MunicipioDTO;
 
 @Mapper
 public interface MunicipioMapper {
-	public final String COSNULTAR_MUNICIPIOS_ID="SELECT id_municipio idMunicipio,municipio nombreMunicipio FROM inventariojs.municipios where departamento_id=#{id};";
+	public final String COSNULTAR_MUNICIPIOS_ID="SELECT id_municipio idMunicipio,municipio nombreMunicipio FROM inventariojs.municipios where id_municipio=#{id};";
 	
 	@Select(COSNULTAR_MUNICIPIOS_ID)
 	public List<MunicipioDTO> consultarMunicipio(@Param("id") Long id);

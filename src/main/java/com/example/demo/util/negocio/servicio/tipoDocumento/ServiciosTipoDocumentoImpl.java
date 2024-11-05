@@ -1,4 +1,4 @@
-package com.example.demo.util.negocio.servicio.municipio;
+package com.example.demo.util.negocio.servicio.tipoDocumento;
 
 import java.util.List;
 
@@ -7,28 +7,24 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.modelos.CategoriasDTO;
 import com.example.demo.util.accesoDatos.DepartamentoMapper;
-import com.example.demo.util.accesoDatos.MunicipioMapper;
+import com.example.demo.util.accesoDatos.TipoDocumentoMapper;
 import com.example.demo.util.modelos.DepartamentoDTO;
 import com.example.demo.util.modelos.ListaDTO;
-import com.example.demo.util.modelos.MunicipioDTO;
+import com.example.demo.util.modelos.TipoDocumento;
 import com.example.demo.util.otros.constantes.config.ConstantesCodigosError;
 
 @Service
-public class ServiciosMunicipioImpl implements ServiciosMunicipio {
+public class ServiciosTipoDocumentoImpl implements ServiciosTipoDocumento {
 	@Autowired
-	MunicipioMapper municipioMapper;
+	TipoDocumentoMapper documentoMapper;
 
 	@Override
-	public ListaDTO cosnultarMunicipio(Long id) {
+	public ListaDTO cosnultarTipoDocumento() {
 		ListaDTO respuesta;
 		try {
 			respuesta =new ListaDTO();
-			System.out.println("kinkkks");
-			System.out.println(id);
-			List<MunicipioDTO> listado=municipioMapper.consultarMunicipio(id);
-			System.out.println("pororo");
-			System.out.println(listado);
-
+			List<TipoDocumento> listado=documentoMapper.consultarTipoDocumento();
+		
 			if (listado.isEmpty()) {
                 respuesta.setCodigoRespuesta(ConstantesCodigosError.CODIGO_DATOS_NO_ENCONTRADOS);
                 respuesta.setMensajeRespuesta(ConstantesCodigosError.CODIGO_DATOS_NO_ENCONTRADOS);

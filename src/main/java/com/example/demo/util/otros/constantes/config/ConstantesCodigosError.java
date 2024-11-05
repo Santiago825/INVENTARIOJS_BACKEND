@@ -61,5 +61,12 @@ public interface ConstantesCodigosError {
     public static final String CODIGO_PENDIENTE_APROBAR = "INF_PEND_APR";
     public static final String CODIGO_RECHAZO_EXITOSO = "INF_RECH_EXTRS";
     public static final String CODIGO_CANCELA_OPERACION = "INF_CANC_OP";
+    
+    public static final String CODIGO_ERROR_EMAIL_EXISTE = "INF_EMAIL_EXIST";
+    public static final String MENSAJE_ERROR_EMAIL_EXISTE= "El correo ya existe";
+    
+    public static final String CODIGO_ERROR_TIPO_DOCUMENTO = "INF_DOCUM_EXIST";
+    public static final String MENSAJE_ERROR_TIPO_DOCUMENTO= "El documento ya existe";
+
 
 }
