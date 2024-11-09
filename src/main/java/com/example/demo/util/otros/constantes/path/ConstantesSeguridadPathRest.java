@@ -34,4 +34,7 @@ public class ConstantesSeguridadPathRest {
 
 	// Token
 	public static final String PATH_TOKEN = "/autenticacion";
+	public static final String PATH_LOGOUT = "/autenticacion_2";
+	
+	
 }

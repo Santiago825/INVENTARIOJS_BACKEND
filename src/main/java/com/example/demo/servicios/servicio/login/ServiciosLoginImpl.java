@@ -24,9 +24,10 @@ public class ServiciosLoginImpl implements ServiciosLogin {
 		ListaDTO respuesta;
 		try {
 			respuesta = new ListaDTO();
-			System.out.println("patros");
-			System.out.println(usuarioDTO);
+			System.out.println("asasas");
+
 			Long valor=loginMapper.validarLogin(usuarioDTO);
+			System.out.println("asasas");
 			System.out.println(valor);
 
 			if(valor<=0) {
